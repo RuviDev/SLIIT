@@ -36,7 +36,7 @@ int main(void) {
     // Calculate the mean
     mean = (float)total / marks_len;
     printf("\n\nMean: %.2f", mean);
-+
+
     return 0;
 }
 
