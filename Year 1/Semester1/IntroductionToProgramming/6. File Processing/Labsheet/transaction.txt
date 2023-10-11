@@ -1,0 +1,5 @@
+Transaction_type		Transaction_Amount(Rs.)
+	D				1000
+	D				2000
+	W				500
+	D				1500

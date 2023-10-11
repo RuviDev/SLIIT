@@ -1,0 +1,5 @@
+Account_Number		NIC_Number		Customer_Name		Account_Balance
+dfs87f87s0df		28723478273v		jamess			       10000.00
+h928374023jn		87324789823v		christ			       10000.00
+dw862w2b2oh3		96813888182v		speed			       10000.00
+jdu2h32hd2o3		86778878998v		jackson			       10000.00
