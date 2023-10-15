@@ -16,16 +16,15 @@ int main(void) {
     	printf("Invoice%d =>\n", i);
         printf("  Enter the pizza type (1, 2), (-1) to exit : ");
         scanf("%d", &pizzaType);
-        scanf("%*c"); 	// clear non integer inputs in the buuder
+        getchar(); 	// clear non integer inputs
         
         if (pizzaType == -1){
-        	printf("  Exited\n\n");
+        	printf("  All Invoices Entered\n\n");
         	break;
 		}
 		
         if (pizzaType != 1 && pizzaType != 2) {
             printf("  => Error, Invalid pizza type\n\n");
-//            while (getchar() != '\n'); // Clear the input buffer
             continue;
             i--;
         }
@@ -43,6 +42,12 @@ int main(void) {
         scanf("%d", &pizzaNum);
         scanf("%*c");
         
+        if (pizzaNum >= 0 && pizzaNum <= 1e-100){
+        	printf("  => Error, Invalid pizza size\n\n");
+            continue;
+            i--;
+		}
+        
         // Calculate the total amount based on pizza type, size, and quantity
         if (pizzaType == 1) {
             if (pizzaSize == 'L') {
@@ -58,7 +63,7 @@ int main(void) {
             }
         }
         
-        printf("  => Total amount: LKR%.2f\n\n", price);
+        printf("  => Total amount: LKR%.2f\n", price);
         totalPrice += price;	// Calculate tht total Price
         printf("\n");
         i++;
