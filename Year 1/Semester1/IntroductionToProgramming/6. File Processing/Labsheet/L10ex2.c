@@ -2,47 +2,47 @@
 #define SIZE 4
 
 int main(void) {
-	// Declare Variables
-    char itemID[4], itemName[10];
-    int quantity;
-    
-    // Open a file for writing
+//	// Declare Variables
+//    char itemID[4], itemName[10];
+//    int quantity;
+//    
+//    // Open a file for writing
     FILE *cfPtr;
-    cfPtr = fopen("purchase.txt", "w");
-    
-    if (cfPtr == NULL) {
-        printf("Failed to create file\n");
-        return -1;
-    }
-    
-    // Write header to the file(comment this when appending)
-    fprintf(cfPtr, "ItemID\t\t Name\t\t Quantity(kg)\t Price_for_1kg");
-    
-    // Get the user inputs until user enters (e) to exit
-    while (1) {
-        int unitPrice;
-        printf("Enter the Item ID / (e) to exit : ");
-        scanf(" %s", &itemID);
-        
-        // Check for the exit condition
-        if (itemID[0] == 'e' && itemID[1] == '\0')
-            break;
-        
-        printf("Enter the Item Name : ");
-        scanf(" %s", &itemName);
-        printf("Enter the Quantity : ");
-        scanf("%d", &quantity);
-        printf("Enter the Price for 1 KG : ");
-        scanf("%d", &unitPrice);
-        printf("\n");
-        
-        // Write item details to the file
-        fprintf(cfPtr, "\n%s\t\t %s\t\t %12d\t %13d", itemID, itemName, quantity, unitPrice);
-    }
-    
-    fclose(cfPtr);
-    
-    
+//    cfPtr = fopen("purchase.txt", "w");
+//    
+//    if (cfPtr == NULL) {
+//        printf("Failed to create file\n");
+//        return -1;
+//    }
+//    
+//    // Write header to the file(comment this when appending)
+//    fprintf(cfPtr, "ItemID\t\t Name\t\t Quantity(kg)\t Price_for_1kg");
+//    
+//    // Get the user inputs until user enters (e) to exit
+//    while (1) {
+//        int unitPrice;
+//        printf("Enter the Item ID / (e) to exit : ");
+//        scanf(" %s", &itemID);
+//        
+//        // Check for the exit condition
+//        if (itemID[0] == 'e' && itemID[1] == '\0')
+//            break;
+//        
+//        printf("Enter the Item Name : ");
+//        scanf(" %s", &itemName);
+//        printf("Enter the Quantity : ");
+//        scanf("%d", &quantity);
+//        printf("Enter the Price for 1 KG : ");
+//        scanf("%d", &unitPrice);
+//        printf("\n");
+//        
+//        // Write item details to the file
+//        fprintf(cfPtr, "\n%s\t\t %s\t\t %12d\t %13d", itemID, itemName, quantity, unitPrice);
+//    }
+//    
+//    fclose(cfPtr);
+//    
+//    
     // Reopen the file for reading
     cfPtr = fopen("purchase.txt", "r");
 

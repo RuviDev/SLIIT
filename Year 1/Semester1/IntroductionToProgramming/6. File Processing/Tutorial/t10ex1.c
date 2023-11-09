@@ -33,7 +33,8 @@ int main(void) {
     FILE *readFile = fopen("number.dat", "r");
 
     int no;
-    while (fscanf(readFile, "%d", &no) == 1) {
+    while (!feof(readFile)) {
+    	fscanf(readFile, "%d", &no);
         printf("%d\t", no);
     }
 
